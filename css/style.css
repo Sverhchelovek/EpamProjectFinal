@@ -1,6 +1,5 @@
 *, *:after, *:before {
   box-sizing: border-box;
-  font-size: 18px;
 }
 
 a {
@@ -17,6 +16,10 @@ ul, img, h1, h2, h3, p {
   padding: 0;
 }
 
+body {
+  font-size: 18px;
+}
+
 .container {
   max-width: 80vw;
   margin: 0 auto;
@@ -27,10 +30,11 @@ ul, img, h1, h2, h3, p {
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  padding-bottom: 15vh;
 }
 
 .main__background {
-  background-image: url("../img/Real.jpg");
+  background-image: url("../img/Chicago.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -89,10 +93,6 @@ header {
   font-size: 3rem;
 }
 
-.contact__buttons {
-  padding-bottom: 15vh;
-}
-
 .menu-bottom {
   display: flex;
   justify-content: space-between;
@@ -109,7 +109,25 @@ header {
 }
 
 .menu__inscription {
-  position: bottom;
+  position: absolute;
+  bottom: -3vh;
+  font-size: 5rem;
+  right: 100px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.about__text {
+  max-width: 430px;
+}
+
+.about__text--big {
+  font-size: 30px;
+  line-height: 1.6;
 }
 
 .main {

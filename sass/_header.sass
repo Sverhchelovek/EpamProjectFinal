@@ -1,6 +1,5 @@
 *, *:after, *:before
 	box-sizing: border-box
-	font-size:18px
 a
 	text-decoration: none
 	color: inherit	
@@ -9,6 +8,8 @@ ul
 ul, img, h1, h2, h3, p 
 	margin: 0
 	padding: 0
+body
+	font-size:18px
 .container
 	max-width: 80vw
 	margin: 0 auto
@@ -17,8 +18,9 @@ ul, img, h1, h2, h3, p
 	flex-direction: column
 	height: 100vh
 	justify-content: space-between
+	padding-bottom: 15vh
 .main__background
-	background-image: url('../img/Real.jpg')
+	background-image: url('../img/Chicago.jpg')
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
@@ -55,8 +57,6 @@ header
 	justify-content: space-between
 .main__Information--text
 	font-size: 3rem
-.contact__buttons
-	padding-bottom: 15vh
 .menu-bottom
 	display: flex
 	justify-content: space-between
@@ -66,9 +66,18 @@ header
 .main__nuance
 	margin-top: 40px
 	display: inline-block
-// .fa-chevron-circle-down
-// 	color: blue
-
 .menu__inscription
-	position: bottom
-	
+	position: absolute
+	bottom: -3vh
+	font-size: 5rem
+	right: 100px
+.about
+	display: flex
+	justify-content: space-between
+	padding-top: 30px
+.about__text
+	max-width: 430px
+.about__text--big
+	font-size:30px
+	line-height:1.6
+.about__video
