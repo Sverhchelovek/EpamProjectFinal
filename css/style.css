@@ -1,5 +1,6 @@
 *, *:after, *:before {
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 a {
@@ -17,7 +18,7 @@ ul, img, h1, h2, h3, p {
 }
 
 .container {
-  max-width: 90vw;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
@@ -79,14 +80,36 @@ header {
   margin-right: 20px;
 }
 
-.mainInformation {
+.main__Information {
   display: flex;
   justify-content: space-between;
+}
+
+.main__Information--text {
+  font-size: 3rem;
+}
+
+.contact__buttons {
+  padding-bottom: 15vh;
 }
 
 .menu-bottom {
   display: flex;
   justify-content: space-between;
+}
+
+.main__nuances {
+  align-items: center;
+  self-align: center;
+}
+
+.main__nuance {
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.menu__inscription {
+  position: bottom;
 }
 
 .main {
