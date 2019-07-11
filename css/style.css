@@ -17,6 +17,7 @@ ul, img, h1, h2, h3, p {
 }
 
 body {
+  font-family: sans-serif;
   font-size: 18px;
 }
 
@@ -25,7 +26,7 @@ body {
   margin: 0 auto;
 }
 
-.main {
+.main__wrap {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -33,7 +34,7 @@ body {
   padding-bottom: 15vh;
 }
 
-.main__background {
+.main {
   background-image: url("../img/Chicago.jpg");
   background-position: center;
   background-size: cover;
@@ -51,13 +52,64 @@ header {
 .logo {
   background-image: url("../img/logo.png");
   height: 20vh;
-  width: 16vw;
+  width: 12vw;
   background-repeat: no-repeat;
   transform: translateY(-15px);
 }
 
 .menu {
   display: flex;
+  overflow: hidden;
+  width: 105%;
+}
+
+.menu li {
+  float: left;
+  margin: 0 0.5em 0 1em;
+}
+
+.menu a {
+  background: #ddd;
+  padding: 0.5em 0.7em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.menu a:hover {
+  background: #99db76;
+}
+
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-width: 1.5em 0 1.5em 1em;
+  border-style: solid;
+  border-color: #ddd #ddd #ddd transparent;
+  left: -1em;
+}
+
+.menu a:hover::before {
+  border-color: #99db76 #99db76 #99db76 transparent;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid #ddd;
+  right: -1em;
+}
+
+.menu a:hover::after {
+  border-left-color: #99db76;
 }
 
 .contact {
@@ -65,11 +117,11 @@ header {
 }
 
 .nav__item {
-  margin-right: 4vw;
+  margin-right: 3vw;
 }
 
 .number {
-  margin-right: 5vw;
+  margin-right: 1vw;
 }
 
 .contact__button {
@@ -81,7 +133,7 @@ header {
 }
 
 .contact__button > a {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .main__Information {
@@ -110,7 +162,7 @@ header {
 
 .menu__inscription {
   position: absolute;
-  bottom: -3vh;
+  bottom: -5vh;
   font-size: 5rem;
   right: 100px;
 }
@@ -123,15 +175,12 @@ header {
 
 .about__text {
   max-width: 430px;
+  line-height: 1.5;
 }
 
 .about__text--big {
   font-size: 30px;
   line-height: 1.6;
-}
-
-.main {
-  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
