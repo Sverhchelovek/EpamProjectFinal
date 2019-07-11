@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 80vw;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
@@ -170,7 +170,13 @@ header {
 .about {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding-top: 30px;
+}
+
+.about__information {
+  display: flex;
+  justify-content: space-between;
 }
 
 .about__text {
@@ -181,6 +187,22 @@ header {
 .about__text--big {
   font-size: 30px;
   line-height: 1.6;
+}
+
+.about__values {
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh 0 10vw 0;
+}
+
+.about__value {
+  margin-right: 5vw;
+}
+
+.about__value--big {
+  font-size: 6rem;
+  color: #99db76;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
