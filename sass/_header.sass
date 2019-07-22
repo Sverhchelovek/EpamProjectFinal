@@ -54,6 +54,7 @@ header
 	position: relative
 .menu a:hover
 	background: #99db76
+	transition: .3s
 .menu a::before
 	content: ""
 	position: absolute
@@ -65,6 +66,7 @@ header
 	left: -1em
 .menu a:hover::before
 	border-color: #99db76 #99db76 #99db76 transparent
+	transition: .3s
 .menu a::after
 	content: ""
 	position: absolute
@@ -76,18 +78,27 @@ header
 	right: -1em
 .menu a:hover::after
 	border-left-color: #99db76
+	transition: .3s
 .contact
 	display: flex
 .nav__item
 	margin-right: 3vw
 .number 
 	margin-right: 1vw
+.contact__buttons .contact__button
+	margin-right: 20px
 .contact__button
+	color: #fff
+	font-weight: 500
 	padding: 15px 40px
-	background-color: yellowgreen
+	background-color: #99db76
 	border-radius: 6%
 	transform: translateY(-10px)
 	text-align: center
+	border: 4px solid #99db76
+.contact__button:hover
+	background-color: rgba(153, 219, 118, 0)
+	border: 4px solid black
 .contact__button>a
 	margin-right: 10px
 .main__Information
@@ -99,7 +110,6 @@ header
 	display: flex
 	justify-content: space-between
 .main__nuances
-	align-items: center
 	align-self: center
 .main__nuance
 	margin-top: 40px
@@ -109,4 +119,8 @@ header
 	bottom: -5vh
 	font-size: 5rem
 	right: 100px
+	font-weight: 700
+	color: rgba(61, 185, 191, 0)
+	-webkit-text-stroke: 1px #99db76
+
 
