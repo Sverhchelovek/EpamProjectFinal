@@ -12,7 +12,8 @@ body
 	font-family: sans-serif
 	font-size:18px
 .container
-	max-width: 90vw
+	width: 90vw
+	max-width: 1300px
 	margin: 0 auto
 .main__wrap
 	display: flex
@@ -26,63 +27,42 @@ body
 	background-size: cover
 	background-repeat: no-repeat
 	width: 100%
-	margin: 0 auto
 header
 	display: flex
 	justify-content: space-between
 	padding: 30px 0px
 .logo
 	background-image: url('../img/logo.png')
-	height: 20vh
-	width: 12vw
+	height: 120px
 	background-repeat: no-repeat
 	transform: translateY(-15px)
 .menu
 	display: flex
-	overflow: hidden
-	width: 105%
-.menu li
-	float: left
-	margin: 0 .5em 0 1em
-.menu a
-	background: #ddd
-	padding: .5em .7em
-	float: left
-	text-decoration: none
-	color: #444
-	text-shadow: 0 1px 0 rgba(255,255,255,.5)
+	padding: 10px 15px
+	background-color: grey
+.nav__item
+	font-size: 15px
 	position: relative
-.menu a:hover
-	background: #99db76
-	transition: .3s
-.menu a::before
-	content: ""
+	text-align: center
+.nav__item::before
+	content:  "/\00a0"
+	color: black
+	padding: 5px
+.nav__item:first-child::before
+	content:  ""	
+.nav__link
+	color: #e24598
+	transition: all 0.3s ease
+.nav__link:hover
+	color: #99db76
+.menu li ul
 	position: absolute
-	top: 50%
-	margin-top: -1.5em
-	border-width: 1.5em 0 1.5em 1em
-	border-style: solid
-	border-color: #ddd #ddd #ddd transparent
-	left: -1em
-.menu a:hover::before
-	border-color: #99db76 #99db76 #99db76 transparent
-	transition: .3s
-.menu a::after
-	content: ""
-	position: absolute
-	top: 50%
-	margin-top: -1.5em
-	border-top: 1.5em solid transparent
-	border-bottom: 1.5em solid transparent
-	border-left: 1em solid #ddd
-	right: -1em
-.menu a:hover::after
-	border-left-color: #99db76
-	transition: .3s
+	min-width: 150px
+	display: none
 .contact
 	display: flex
 .nav__item
-	margin-right: 3vw
+	margin-right: 2vw
 .number 
 	margin-right: 1vw
 .contact__buttons .contact__button
@@ -101,10 +81,10 @@ header
 	border: 4px solid black
 .contact__button>a
 	margin-right: 10px
-.main__Information
+.main-Information
 	display: flex
 	justify-content: space-between
-.main__Information--text
+.main-Information__text
 	font-size: 3rem
 .menu-bottom
 	display: flex
@@ -118,7 +98,7 @@ header
 	position: absolute
 	bottom: -5vh
 	font-size: 5rem
-	right: 100px
+	right: 4vw
 	font-weight: 700
 	color: rgba(61, 185, 191, 0)
 	-webkit-text-stroke: 1px #99db76
