@@ -22,9 +22,13 @@ body {
   font-size: 18px;
 }
 
+.main {
+  position: relative;
+}
+
 .container {
-  width: 90vw;
   max-width: 1300px;
+  width: 90vw;
   margin: 0 auto;
 }
 
@@ -33,10 +37,10 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  padding-bottom: 15vh;
+  padding: 20px 0 100px;
 }
 
-.main {
+.main-menu {
   background-image: url("../img/Chicago.jpg");
   background-position: center;
   background-size: cover;
@@ -44,27 +48,30 @@ body {
   width: 100%;
 }
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
-  padding: 30px 0px;
+  align-items: center;
 }
 
 .logo {
   background-image: url("../img/logo.png");
   height: 120px;
+  width: 150px;
+  background-size: contain;
   background-repeat: no-repeat;
-  transform: translateY(-15px);
+  transform: translateY(-10px);
 }
 
 .menu {
   display: flex;
   padding: 10px 15px;
   background-color: grey;
+  align-self: flex-start;
 }
 
 .nav__item {
-  font-size: 15px;
+  font-size: 17px;
   position: relative;
   text-align: center;
 }
@@ -80,7 +87,7 @@ header {
 }
 
 .nav__link {
-  color: #e24598;
+  color: #fff;
   transition: all 0.3s ease;
 }
 
@@ -103,7 +110,9 @@ header {
 }
 
 .number {
-  margin-right: 1vw;
+  margin-right: 3vw;
+  color: #fff;
+  align-self: center;
 }
 
 .contact__buttons .contact__button {
@@ -111,19 +120,29 @@ header {
 }
 
 .contact__button {
-  color: #fff;
   font-weight: 500;
-  padding: 15px 40px;
-  background-color: #99db76;
-  border-radius: 6%;
-  transform: translateY(-10px);
-  text-align: center;
-  border: 4px solid #99db76;
 }
 
-.contact__button:hover {
+.buttons, .button {
+  margin-right: 20px;
+}
+
+.contact__button {
+  font-weight: 500;
+}
+
+.button {
+  color: #fff;
+  padding: 15px 40px;
+  background-color: #99db76;
+  border-radius: 5px;
+  transform: translateY(-5px);
+  border: 2px solid #99db76;
+}
+
+.button:hover {
   background-color: rgba(153, 219, 118, 0);
-  border: 4px solid black;
+  border: 2px solid black;
 }
 
 .contact__button > a {
@@ -161,6 +180,73 @@ header {
   font-weight: 700;
   color: rgba(61, 185, 191, 0);
   -webkit-text-stroke: 1px #99db76;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 320px;
+  background-color: #402985;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+.popup__title {
+  font-size: 28px;
+}
+.popup--active {
+  display: flex;
+}
+
+.popup input {
+  padding: 10px;
+}
+
+.btn__close {
+  display: inline-block;
+  width: 50px;
+  padding: 10px 0 20px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.btn__close--left {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.btn__close--right {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.btn__close:hover {
+  cursor: pointer;
 }
 
 .about {
@@ -211,7 +297,7 @@ header {
   padding: 2px 5px;
 }
 
-h2 {
+.advantages-question {
   font-size: 3rem;
 }
 
@@ -347,6 +433,114 @@ textarea {
 .contact-form p {
   color: #fff;
   margin: 15px 0;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 0;
+  background-color: yellowgreen;
+}
+
+.dwelling {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: yellowgreen;
+}
+.dwelling__left {
+  width: 300px;
+  border: 2px solid black;
+  background-color: #99db76;
+  padding: 25px 15px;
+}
+.dwelling__right {
+  border: 2px solid black;
+  width: 100%;
+}
+.dwelling__types {
+  margin: 15px 0;
+}
+.dwelling__cost {
+  margin-bottom: 15px 0;
+}
+.dwelling-right {
+  margin: 20px 10px;
+}
+
+.dwelling input {
+  margin: 10px 0;
+}
+
+.founded-cards {
+  background-color: grey;
+  padding: 15px;
+}
+.founded-cards__link {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  display: inline-block;
+  text-align: center;
+}
+
+.founded-cards a:hover {
+  color: #99db76;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  padding: 15px 30px 15px 10px;
+  align-items: flex-start;
+  border-bottom: 2px solid black;
+}
+.card__text {
+  margin: 10px 0;
+}
+
+.adress {
+  margin: 15px 0;
+}
+
+.button__details {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.card__photo {
+  width: 290px;
+  height: 230px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.card__description li {
+  display: block;
+  margin-top: 10px;
+  height: 100%;
+}
+
+.card__description--bold {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.photo {
+  background-image: url("../img/apartment1.jpg");
+}
+
+.price--orange {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

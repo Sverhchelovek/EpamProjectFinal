@@ -12,3 +12,6 @@ function initMap() {
     title: 'PT'
   });
 }
+
+
+let navLinks  = document.querySelectorAll('.nav__link');

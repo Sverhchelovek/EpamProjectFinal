@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink﻿-to-fit=no﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿">
-	<title>Real estate agency</title>
+	<title>Estate agency</title>
 
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -15,23 +15,18 @@
 
 </head>
 <body>
-	<section class="main-menu">
-		<div class="main">
+	<section class="main">
+		<div class="main-menu">
 			<div class="container">
 				<div class="main__wrap">
 					<header class="header">
-						<div class="logo">
-							<a class="logo header__logo" href="/">
-								<span class="logo__title">Agency</span>
-								<span class="logo__title logo__title--active">Real Estate</span><br>
-								<span class="logo__text">Все для Вас</span>
+							<a class="logo" href="index.html">
 							</a>
-						</div>
 						<nav class="nav">
 							<ul class="menu">
 								<li class="nav__item"><a class="nav__link" href="#">About us</a></li>
 								<li class="nav__item"><a class="nav__link" href="#">Services</a></li>
-								<li class="nav__item"><a class="nav__link" href="#">Projects</a>
+								<li class="nav__item"><a class="nav__link" href="projects.html">Projects</a>
 									<ul class="submenu">
 										<li><a href="#">Houses</a></li>
 										<li><a href="#">Apartments</a></li>
@@ -43,9 +38,9 @@
 							</ul>
 						</nav>
 						<div class="contact">
-							<div class="number">+38(067)3289892
-							</div>
-							<a href="#" class="contact__button">
+							<p class="number">+38(067)3289892
+							</p>
+							<a href="#" id="callButton" class="button contact__button">
 								Call!
 							</a>
 						</div>
@@ -59,14 +54,15 @@
 							<span class="main__nuance">Берем все нюансы на себя</span><br>
 							<i class="fas fa-chevron-circle-down"></i>
 							<span class="main__nuance">Сопровождаем сделку на всех этапах</span><br>
-							<i class="fas fa-chevron-circle-down"></i><span class="main__nuance">Более 345 успешных
+							<i class="fas fa-chevron-circle-down"></i>
+							<span class="main__nuance">Более 345 успешных
 							сделок в 2018 году</span><br>	
 						</div>
 					</div>
 					<div class="menu-bottom">
-						<div class="contact__buttons">
-							<a class="contact__button" href="#">Узнать больше</a>
-							<a class="contact__button" href="#">Заказать консультацию</a>
+						<div class="buttons">
+							<a class="button" href="#">Узнать больше</a>
+							<a class="button" href="#">Заказать консультацию</a>
 						</div>
 						<div class="menu__inscription">
 							<span>Perfect <br>team</span>
@@ -74,6 +70,19 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="popup popup--active1">
+			<form class="popup__form" action="">
+				<h3 class="popup__title">Оставьте ваш номер</h3>
+				<span class="btn__close">
+					<span class="btn__close--left"></span>
+					<span class="btn__close--right"></span>
+				</span>
+				<p class="popup__text">Наш експерт перезвонит вам в течение 20 минут і проконсультирует по все вопросам.</p>
+				<input type="text" name="" placeholder="Ваше Имя">
+				<input type="text" name="" placeholder="Ваш телефон">
+				<input class="contact__button" type="submit" name="">
+			</form>
 		</div>
 	</section>
 	<section class="section-two">
@@ -128,7 +137,7 @@
 	<section class="our-advantages">
 		<div class="container">
 			<div class="main-advantages">
-				<h2>Why u should choose us?</h2>
+				<h2 class="advantages-question">Why u should choose us?</h2>
 				<div class="advantages">
 					<div class="advantage">
 						<span class="svg__icon">
@@ -226,5 +235,6 @@
 
 
 	<script src="js/main.js"></script>
+	<script src="js/popup.js"></script>
 </body>
 </html>
