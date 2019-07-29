@@ -1,11 +1,17 @@
 let popup = document.querySelector('.popup');
 let popupClose = document.querySelector('.btn__close');
-let contactButton = document.querySelector('#callButton');
+let contactButtons  = document.querySelectorAll('.contact__button');
 
-contactButton.addEventListener('click', function(){
+
+
+
+
+	for (let contactButton of contactButtons) {
+		contactButton.addEventListener('click', function(){
 	popup.classList.add('popup--active');
 });
 
 popupClose.addEventListener('click', function(){
 	popup.classList.remove('popup--active');
 });
+			}

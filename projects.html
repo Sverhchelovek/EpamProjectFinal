@@ -41,6 +41,19 @@
 							Call!
 						</a>
 					</div>
+					<div class="popup popup--active1">
+						<form class="popup__form" action="">
+							<h3 class="popup__title">Оставьте ваш номер</h3>
+							<span class="btn__close">
+								<span class="btn__close--left"></span>
+								<span class="btn__close--right"></span>
+							</span>
+							<p class="popup__text">Наш експерт перезвонит вам в течение 20 минут і проконсультирует по все вопросам.</p>
+							<input type="text" name="" placeholder="Ваше Имя">
+							<input type="text" name="" placeholder="Ваш телефон">
+							<input class="contact__button" type="submit" name="">
+						</form>
+					</div>
 				</header>
 			</div>
 		</div>	
@@ -50,13 +63,16 @@
 			<h2>НАЙТИ НЕДВИЖИМОСТЬ</h2>
 			<div class="dwelling__types">
 				<span>Тип недвижимости</span><br>
-				<input type="radio" name="dwelling__type">Houses<br>
-				<input type="radio" name="dwelling__type">Apartments<br>
-				<input type="radio" name="dwelling__type">Villas<br>		
+				<input type="checkbox" name="dwelling__type" value="houses" id="checkboxHouses">Houses<br>
+				<input type="checkbox" name="dwelling__type" value="aparatments" id="checkboxAparatments">Apartments<br>
+				<input type="checkbox" name="dwelling__type" value="villas" id="checkboxVillas">Villas<br>		
 			</div>
 			<div class="dwelling__cost">
-				<span>Цена, USD</span>
-				<span>--------------------</span>
+				<span>Цена, USD:</span><br>
+				<span>Min</span>
+				<input class="priceUSD priceUSD--min" type="text" name="min">
+				<span>Max</span>
+				<input class="priceUSD priceUSD--max" type="text" name="max">
 			</div>
 			<div class="dwelling__area">
 				<span>Район:</span><br>
@@ -74,49 +90,26 @@
 		</div>
 		<div class="dwelling__right">
 			<div class="founded-cards">
-				<p>
-					Найдено х об'єктів
-				</p>
-				<p>
-					<a href="#" class="founded-cards__link">1</a>
-					<a href="#" class="founded-cards__link">2</a>
-					<a href="#" class="founded-cards__link">3</a>
-					<a href="#" class="founded-cards__link">4</a>
-				</p>
+				<div class="">
+					<p>
+						Найдено х об'єктів
+					</p>
+					<p>
+						<a href="#" class="founded-cards__link">1</a>
+						<a href="#" class="founded-cards__link">2</a>
+						<a href="#" class="founded-cards__link">3</a>
+						<a href="#" class="founded-cards__link">4</a>
+					</p>					
+				</div>
+
 			</div>
 			<div class="cards">
-				<div class="card">	
-					<div class="card__photo photo"></div>
-					<div class="card__text">
-						<div class="price">
-							<span class="price--orange">$ 57 000</span><br>
-							<span>($ 1 628 за кв.м)</span>
-						</div>
-						<div class="adress">
-							<span>Дмитриевская ул. 96/98</span>
-							<p>Продажа квартиры в Киеве, Шевченковский р-он</p>
-						</div>
-						<a href="" class="button button__details">Details</a>
-					</div>
-					<ul class="card__description">
-						<li>
-							<span class="card__description--bold">код</span><span></span>
-						</li>
-						<li>
-							<span>Комнат</span><span></span>
-						</li>
-						<li>
-							<span>Площадь кв.м</span><span></span>
-						</li>
-						<li>
-							<span>Етаж</span><span></span>
-						</li>
 
-					</ul>
-				</div>
 			</div>
 
 		</div>
 	</section>
+	<script src="js/showCards.js"></script>
+	<script src="js/popup.js"></script>
 </body>
 </html>

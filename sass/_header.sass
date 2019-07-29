@@ -33,17 +33,16 @@ body
 	display: flex
 	justify-content: space-between
 	align-items: center
+	background-color: grey
 .logo
 	background-image: url('../img/logo.png')
 	height: 120px
 	width: 150px
 	background-size: contain
 	background-repeat: no-repeat
-	transform: translateY(-10px)
 .menu
 	display: flex
 	padding: 10px 15px
-	background-color: grey
 	align-self: flex-start
 .nav__item
 	font-size: 17px
@@ -86,7 +85,6 @@ body
 	padding: 15px 40px
 	background-color: #99db76
 	border-radius: 5px
-	transform: translateY(-5px)
 	border: 2px solid #99db76
 .button:hover
 	background-color: rgba(153, 219, 118, 0)
@@ -125,6 +123,7 @@ body
 	justify-content: center
 	align-items: center
 	color: #fff
+	z-index: 2
 	&__form
 		display: flex
 		flex-direction: column

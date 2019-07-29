@@ -1,4 +1,6 @@
-function initMap() {
+function 
+  window.onload = function () {
+    initMap() {
   let myLocation = {lat: 50.465019, lng: 30.514980};
 
   let map = new google.maps.Map(document.getElementById('map'), {
@@ -12,6 +14,6 @@ function initMap() {
     title: 'PT'
   });
 }
+}
 
 
-let navLinks  = document.querySelectorAll('.nav__link');
