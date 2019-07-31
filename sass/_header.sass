@@ -13,6 +13,7 @@ body
 	font-size: 18px
 .main
 	position: relative
+	overflow: hidden
 .container
 	max-width: 1300px
 	width: 90vw
@@ -24,16 +25,42 @@ body
 	justify-content: space-between
 	padding: 20px 0 100px
 .main-menu
-	background-image: url('../img/Chicago.jpg')
+	width: 100vw
+	height: 100vh
+#sliderPhoto
+	height: 100vh
+	width: 500%
+	display: flex
+	position: absolute
+	transition: 1s
+.menu-absolute
+	position: absolute
+	width: 100%
+	background: rgba(black, 0.6)
+.main-slider__photo
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
-	width: 100%
+	height: 100vh
+.chicago
+	background-image: url('../img/chicago.jpg')
+	width: 20%
+.kiev
+	background-image: url('../img/kiev.jpg')
+	width: 20%
+.usa
+	background-image: url('../img/usa.jpg')
+	width: 20%
+.netherlands
+	background-image: url('../img/netherlands.jpg')
+	width: 20%
+.odesa
+	background-image: url('../img/odesa.jpg')
+	width: 20%
 .header
 	display: flex
 	justify-content: space-between
 	align-items: center
-	background-color: grey
 .logo
 	background-image: url('../img/logo.png')
 	height: 120px
@@ -45,12 +72,14 @@ body
 	padding: 10px 15px
 	align-self: flex-start
 .nav__item
-	font-size: 17px
+	font-size: 18px
 	position: relative
 	text-align: center
+	font-family: 'fontello'
+
 .nav__item::before
 	content:  "/\00a0"
-	color: black
+	color: #fff
 	padding: 5px
 .nav__item:first-child::before
 	content:  ""	
@@ -58,11 +87,14 @@ body
 	color: #fff
 	transition: all 0.3s ease
 .nav__link:hover
-	color: #99db76
+	color: #e24598
 .menu li ul
 	position: absolute
 	min-width: 150px
 	display: none
+object
+	width: 55px
+	height: 55px
 .contact
 	display: flex
 .nav__item
@@ -75,7 +107,6 @@ body
 	margin-right: 20px
 .contact__button
 	font-weight: 500
-
 .buttons, .button
 	margin-right: 20px
 .contact__button
@@ -94,24 +125,42 @@ body
 .main-Information
 	display: flex
 	justify-content: space-between
+	color: #fff
 .main-Information__text
 	font-size: 3rem
 .menu-bottom
 	display: flex
 	justify-content: space-between
+.slider-right
+	display: inline-block
 .main__nuances
 	align-self: center
+	font-size: 22px
 .main__nuance
 	margin-top: 40px
 	display: inline-block
+.main__nuance::before
+	font-weight: normal
+	font-style: normal
+	display: inline-block
+	text-decoration: inherit
+	content: "\f433"
+.menu-bottom
+	// position: relative
+.button__slider
+	position: absolute
+	right: 50%
+	bottom: -50px
+	transform: translateX(50%)
 .menu__inscription
 	position: absolute
-	bottom: -5vh
+	bottom: -30px
 	font-size: 5rem
 	right: 4vw
 	font-weight: 700
 	color: rgba(61, 185, 191, 0)
 	-webkit-text-stroke: 1px #99db76
+	z-index: 2
 .popup
 	width: 100%
 	height: 100%
@@ -168,3 +217,5 @@ body
 		left: 0
 	&:hover
 		cursor: pointer
+.icon-home-outline:before
+	content: '\e800'
