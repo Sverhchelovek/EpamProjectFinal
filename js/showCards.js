@@ -8,27 +8,27 @@ let houses = [
         "room":"1", 
         "square": "123",  
         "floor":"1",
+        },
+       { 
+      	"photo": "url(../img/apartment1.jpg)", 
+        "price": "120000",
+        "location": "Дмитриевская ул. 96/98 ",  
+        "district": "Шевченковский р-он",
+        "code": "120000", 
+        "room":"1", 
+        "square": "123",  
+        "floor":"1",
+        },
+       { 
+      	"photo": "url(../img/apartment1.jpg)", 
+        "price": "70000",
+        "location": "Дмитриевская ул. 96/98", 
+        "district": "Шевченковский р-он", 
+        "code": "123", 
+        "room":"1", 
+        "square": "123",  
+        "floor":"1",
         }
-       // { 
-      	// "photo": "url(../img/apartment1.jpg)", 
-       //  "price": "120000",
-       //  "location": "Дмитриевская ул. 96/98 ",  
-       //  "district": "Шевченковский р-он",
-       //  "code": "120000", 
-       //  "room":"1", 
-       //  "square": "123",  
-       //  "floor":"1",
-       //  },
-       // { 
-      	// "photo": "url(../img/apartment1.jpg)", 
-       //  "price": "17500",
-       //  "location": "Дмитриевская ул. 96/98", 
-       //  "district": "Шевченковский р-он", 
-       //  "code": "123", 
-       //  "room":"1", 
-       //  "square": "123",  
-       //  "floor":"1",
-       //  }
 ];
 
 let apartments = [
@@ -196,82 +196,6 @@ let renderProjects = () => {
 
 renderProjects();
 
-// let filterPrise = () => {
-// 	// при вводі оновлюємо значення
-// 	minPriceValue = parseInt(minPrice.value);
-// 	maxPriceValue = parseInt(maxPrice.value);
-
-// 	// Якщо поле max порожнє, робимо превірку по min
-// 	if (maxPrice.value === '') {
-// 		projects = [];
-// 		cards.innerHTML = '';
-// 		for (let i = 0; i < houses.length; i++) {
-// 			if(parseInt(houses[i].price) >= minPriceValue) {
-// 				projects.push(houses[i]);
-// 			}
-// 		}
-// 		renderProjects();
-// 	}
-// 	// Якщо поле min порожнє, робимо превірку по max
-// 	if (minPrice.value === '') {
-// 		projects = [];
-// 		cards.innerHTML = '';
-// 		for (let i = 0; i < houses.length; i++) {
-// 			if(parseInt(houses[i].price) <= maxPriceValue) {
-// 				projects.push(houses[i]);
-// 			}
-// 		}
-// 		renderProjects();
-// 	}
-// 	// Якщо обидва порожні
-// 	if (maxPrice.value === '' && minPrice.value === '') {
-// 		projects = [];
-// 		cards.innerHTML = '';
-// 		for (let i = 0; i < houses.length; i++) {
-// 			projects.push(houses[i]);
-// 		}
-// 		renderProjects();
-// 	}
-// 	// Якщо обидва заповнені
-// 	if (maxPrice.value !== '' && minPrice.value !== '') {
-// 		projects = [];
-// 		cards.innerHTML = '';
-// 		for (let i = 0; i < houses.length; i++) {
-// 			if(parseInt(houses[i].price) <= maxPriceValue && parseInt(houses[i].price) >= minPriceValue) {
-// 				projects.push(houses[i]);
-// 			}
-// 		}
-// 		renderProjects();
-// 	}
-// };
-
-let filterType = () => {
-
-	let chckedProjects = [];
-
-	if(checkboxHouses.checked) {
-		for (let i = 0; i < houses.length; i++) {
-			checkedProjects.push(houses[i]);
-			console.log('sdf');
-		}
-	}
-
-	if(checkboxApartments.checked) {
-		for (let i = 0; i < apartments.length; i++) {
-			checkedProjects.push(apartments[i]);
-			console.log('sddddddf');
-		}
-	}
-
-	if(checkboxVillas.checked) {
-		for (let i = 0; i < villas.length; i++) {
-			checkedProjects.push(villas[i]);
-			console.log('ssssdf');
-		}
-	}
-
-};
-
 let filterPrise = () => {
 	// при вводі оновлюємо значення
 	minPriceValue = parseInt(minPrice.value);
@@ -281,9 +205,9 @@ let filterPrise = () => {
 	if (maxPrice.value === '') {
 		projects = [];
 		cards.innerHTML = '';
-		for (let i = 0; i < checkedProjects.length; i++) {
-			if(parseInt(checkedProjects[i].price) >= minPriceValue) {
-				projects.push(checkedProjects[i]);
+		for (let i = 0; i < houses.length; i++) {
+			if(parseInt(houses[i].price) >= minPriceValue) {
+				projects.push(houses[i]);
 			}
 		}
 		renderProjects();
@@ -292,9 +216,9 @@ let filterPrise = () => {
 	if (minPrice.value === '') {
 		projects = [];
 		cards.innerHTML = '';
-		for (let i = 0; i < checkedProjects.length; i++) {
-			if(parseInt(checkedProjects[i].price) <= maxPriceValue) {
-				projects.push(checkedProjects[i]);
+		for (let i = 0; i < houses.length; i++) {
+			if(parseInt(houses[i].price) <= maxPriceValue) {
+				projects.push(houses[i]);
 			}
 		}
 		renderProjects();
@@ -303,8 +227,8 @@ let filterPrise = () => {
 	if (maxPrice.value === '' && minPrice.value === '') {
 		projects = [];
 		cards.innerHTML = '';
-		for (let i = 0; i < checkedProjects.length; i++) {
-			projects.push(checkedProjects[i]);
+		for (let i = 0; i < houses.length; i++) {
+			projects.push(houses[i]);
 		}
 		renderProjects();
 	}
@@ -312,17 +236,92 @@ let filterPrise = () => {
 	if (maxPrice.value !== '' && minPrice.value !== '') {
 		projects = [];
 		cards.innerHTML = '';
-		for (let i = 0; i < checkedProjects.length; i++) {
-			if(parseInt(checkedProjects[i].price) <= maxPriceValue && parseInt(checkedProjects[i].price) >= minPriceValue) {
-				projects.push(checkedProjects[i]);
+		for (let i = 0; i < houses.length; i++) {
+			if(parseInt(houses[i].price) <= maxPriceValue && parseInt(houses[i].price) >= minPriceValue) {
+				projects.push(houses[i]);
 			}
 		}
 		renderProjects();
 	}
 };
 
+// let filterType = () => {
+
+	// let checkedProjects = [];
+
+// 	if(checkboxHouses.checked) {
+// 		for (let i = 0; i < houses.length; i++) {
+// 			checkedProjects.push(houses[i]);
+// 			console.log('sdf');
+// 		}
+// 	}
+
+// 	if(checkboxApartments.checked) {
+// 		for (let i = 0; i < apartments.length; i++) {
+// 			checkedProjects.push(apartments[i]);
+// 			console.log('sddddddf');
+// 		}
+// 	}
+
+// 	if(checkboxVillas.checked) {
+// 		for (let i = 0; i < villas.length; i++) {
+// 			checkedProjects.push(villas[i]);
+// 			console.log('ssssdf');
+// 		}
+// 	}
+
+// };
+
+// let filterPrise = () => {
+// 	// при вводі оновлюємо значення
+// 	minPriceValue = parseInt(minPrice.value);
+// 	maxPriceValue = parseInt(maxPrice.value);
+
+// 	// Якщо поле max порожнє, робимо превірку по min
+// 	if (maxPrice.value === '') {
+// 		projects = [];
+// 		cards.innerHTML = '';
+// 		for (let i = 0; i < checkedProjects.length; i++) {
+// 			if(parseInt(checkedProjects[i].price) >= minPriceValue) {
+// 				projects.push(checkedProjects[i]);
+// 			}
+// 		}
+// 		renderProjects();
+// 	}
+// 	// Якщо поле min порожнє, робимо превірку по max
+// 	if (minPrice.value === '') {
+// 		projects = [];
+// 		cards.innerHTML = '';
+// 		for (let i = 0; i < checkedProjects.length; i++) {
+// 			if(parseInt(checkedProjects[i].price) <= maxPriceValue) {
+// 				projects.push(checkedProjects[i]);
+// 			}
+// 		}
+// 		renderProjects();
+// 	}
+// 	// Якщо обидва порожні
+// 	if (maxPrice.value === '' && minPrice.value === '') {
+// 		projects = [];
+// 		cards.innerHTML = '';
+// 		for (let i = 0; i < checkedProjects.length; i++) {
+// 			projects.push(checkedProjects[i]);
+// 		}
+// 		renderProjects();
+// 	}
+// 	// Якщо обидва заповнені
+// 	if (maxPrice.value !== '' && minPrice.value !== '') {
+// 		projects = [];
+// 		cards.innerHTML = '';
+// 		for (let i = 0; i < checkedProjects.length; i++) {
+// 			if(parseInt(checkedProjects[i].price) <= maxPriceValue && parseInt(checkedProjects[i].price) >= minPriceValue) {
+// 				projects.push(checkedProjects[i]);
+// 			}
+// 		}
+// 		renderProjects();
+// 	}
+// };
+
 let filter = () => {
-	filterType();
 	filterPrise();
 };
 
