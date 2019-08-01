@@ -1,0 +1,94 @@
+{
+  "name": "safet",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "a42f298da5c64e646a5d532724cd6e15",
+      "css": "home-outline",
+      "code": 59392,
+      "src": "typicons"
+    },
+    {
+      "uid": "id8wp0cygl9trzbhlbd9o0fygiesi629",
+      "css": "search",
+      "code": 59394,
+      "src": "modernpics"
+    },
+    {
+      "uid": "67a9d2e5512b8aa812eff7da6d36bffc",
+      "css": "ok-circled",
+      "code": 59396,
+      "src": "elusive"
+    },
+    {
+      "uid": "1e32e1f8787cf3cb9f52f8850822dcb6",
+      "css": "cogs",
+      "code": 59400,
+      "src": "elusive"
+    },
+    {
+      "uid": "da0fd38d651815e3a12f6c030ff1fe5b",
+      "css": "newspaper",
+      "code": 59401,
+      "src": "entypo"
+    },
+    {
+      "uid": "6cc7af3e5b55720bcb6ef68372ce24be",
+      "css": "facebook-official",
+      "code": 62000,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0fbfb1cd7a847c88ea4c141d0e1bbdb5",
+      "css": "instagram",
+      "code": 62253,
+      "src": "entypo"
+    },
+    {
+      "uid": "906348dc798a0d42715cc97c875e3ac6",
+      "css": "twitter-squared",
+      "code": 62212,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "531359183f9fedb14b23666f1308591f",
+      "css": "telegram",
+      "code": 62150,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ff1710a605b3fc98346903db89034558",
+      "css": "balance-scale",
+      "code": 62030,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "531bc468eecbb8867d822f1c11f1e039",
+      "css": "calendar",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "31972e4e9d080eaa796290349ae6c1fd",
+      "css": "users",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3e1bb74572a30486bd647304d9fcaff6",
+      "css": "lock",
+      "code": 59397,
+      "src": "typicons"
+    },
+    {
+      "uid": "3d1e04316a48ace4e2b81be58343a41c",
+      "css": "building",
+      "code": 61687,
+      "src": "fontawesome"
+    }
+  ]
+}
