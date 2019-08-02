@@ -505,8 +505,9 @@ object {
   max-width: 300px;
 }
 
-.icon-right-dir {
+.icon-right-dira::before {
   content: "0xe806";
+  background-color: #e24598;
 }
 
 .service {
@@ -652,6 +653,30 @@ form {
 .contact-form p {
   color: #fff;
   margin: 15px 0;
+}
+
+.icon-contact {
+  font-size: 2rem;
+}
+
+.icon-facebook-official {
+  color: #3b5998;
+}
+
+.icon-telegram {
+  color: #0088cc;
+}
+
+.icon-twitter-squared {
+  color: #1DA1F2;
+}
+
+.icon-instagram,
+.icon-instagram::before {
+  background: -webkit-gradient(linear, left bottom, right top, from(#fcb045), to(#833ab4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
 }
 
 .projects {
