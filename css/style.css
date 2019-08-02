@@ -398,7 +398,7 @@ object {
 }
 
 .advantage {
-  width: 30%;
+  width: calc(100% / 3 - 20px);
   padding: 40px 40px 20px 30px;
   border-radius: 5px;
   transition: 0.4s;
@@ -461,14 +461,52 @@ object {
   width: calc(33.3% - 10px);
 }
 
-.upper-service__big {
-  border: 2px solid red;
+.service-wrapper {
   width: calc(100% - 32.8% - 10px);
   background-image: url("../img/services-big.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.service__big {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px 55px 30px 35px;
+  color: #fff;
+}
+
+.title-big {
+  font-size: 2.3rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.info_p {
+  max-width: 450px;
+  font-size: 20px;
+}
+
+.service__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.service__details p {
+  font-size: 12px;
+  max-width: 300px;
+}
+
+.icon-right-dir {
+  content: "0xe806";
 }
 
 .service {
@@ -477,8 +515,10 @@ object {
 }
 
 .services-title {
-  font-size: 2.5rem;
-  max-width: 800px;
+  font-size: 3rem;
+  max-width: 900px;
+  font-weight: 700;
+  margin: 20px 0px 40px 0;
 }
 
 .service-title {
@@ -509,6 +549,15 @@ object {
   color: black;
 }
 
+.service__list {
+  margin-left: 20px;
+  display: block;
+}
+
+.service__list li {
+  margin-top: 10px;
+}
+
 .bottom-service__start {
   width: calc(33.3% - 10px);
   background-color: #e24598;
@@ -530,6 +579,10 @@ object {
 
 .our-contacts {
   margin: 50px 0;
+}
+
+.our-contacts__title {
+  font-size: 2rem;
 }
 
 .map__wrapper {
@@ -575,7 +628,7 @@ object {
 
 .title {
   color: #fff;
-  font-size: 28px;
+  font-size: 1.5rem;
 }
 
 form {
