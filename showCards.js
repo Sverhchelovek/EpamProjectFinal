@@ -14,7 +14,7 @@ let data = [
 		{ 
 		"photo": "url(img/apartment1.jpg)", 
 		"price": "120000",
-		"location": "Дмитриевская ул. 96/98 1",  
+		"location": "Дмитриевская ул. 96/98 ",  
 		"district": "Шевченковский",
 		"code": "120000", 
 		"room":"1", 
@@ -25,7 +25,7 @@ let data = [
 		{ 
 		"photo": "url(img/apartment1.jpg)", 
 		"price": "70000",
-		"location": "Дмитриевская ул. 96/98 2", 
+		"location": "Дмитриевская ул. 96/98", 
 		"district": "Шевченковский", 
 		"code": "123", 
 		"room":"1", 
@@ -39,7 +39,7 @@ let data = [
  		{
       	"photo": "url('img/apartment1.jpg')", 
         "price": "453321",
-        "location": "Дмитриевская ул. 96/98 3",  
+        "location": "Дмитриевская ул. 96/98 ",  
         "district": "Шевченковский",
         "code": "123", 
         "room":"1", 
@@ -102,8 +102,8 @@ let cardTemplate = `
 							<span class="price--orange"> </span><br>
 						</div>
 						<div class="adress">
-							<p class="district">sdf</p>
-							<p class="location"></p>
+							<span class="district"></span>
+							<p class="location"> Продажа в Киеве, </p>
 						</div>
 						<a href="" class="button button__details">Details</a>
 					</div>
@@ -251,9 +251,6 @@ filterByType();
 filterByPrice();
 filterByDistrict();
 renderProjects();
-
-console.log(arrayToRender[0]);
-
 };
 
 filter();

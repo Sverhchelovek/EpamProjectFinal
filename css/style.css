@@ -682,12 +682,12 @@ form {
 .projects {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0 30px 0;
-  background-color: #D3D3D3;
+  background-color: #808080;
 }
 
 .dwelling {
-  background-color: #D3D3D3;
+  background-color: #bdbebd;
+  padding-top: 20px;
 }
 .dwelling-flex {
   display: flex;
@@ -805,6 +805,45 @@ form {
 
 .card__description li span:last-child {
   font-weight: 600;
+}
+
+.vacancies {
+  background-color: #808080;
+}
+
+.vacancy__wrap {
+  background-color: #bdbebd;
+}
+
+.vacancy {
+  position: relative;
+  height: calc(100vh - 120px);
+}
+
+.background-block {
+  position: absolute;
+  z-index: 0;
+  width: 350px;
+  height: calc(100vh - 120px);
+  background-color: lightblue;
+  opacity: 0.3;
+}
+
+.vacancy__title {
+  font-size: 3rem;
+  max-width: 900px;
+}
+
+.vacancy__card {
+  display: flex;
+}
+
+.vacancy__description {
+  width: 55%;
+}
+
+.vacancy__offer {
+  width: 45%;
 }
 
 /*# sourceMappingURL=style.css.map */
