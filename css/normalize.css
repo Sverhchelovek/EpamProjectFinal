@@ -347,16 +347,14 @@ template {
 [hidden] {
   display: none;
 }
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
+
+*, *:after, *:before
+  box-sizing: border-box
+a
+  text-decoration: none
+  color: inherit  
+ul 
+  list-style: none
+ul, img, h1, h2, h3, p 
+  margin: 0
+  padding: 0
