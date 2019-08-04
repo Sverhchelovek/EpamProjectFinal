@@ -731,6 +731,11 @@ form {
   color: #99db76;
 }
 
+.cards {
+  overflow: scroll;
+  height: 600px;
+}
+
 .card {
   display: flex;
   justify-content: space-between;
@@ -738,6 +743,7 @@ form {
   padding: 15px 30px 15px 10px;
   align-items: flex-start;
   border-bottom: 2px solid black;
+  min-height: 330px;
 }
 .card__text {
   margin: 10px 0;

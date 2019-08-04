@@ -1,70 +1,10 @@
-let data = [		
-	[
-		{
-		"photo": "url('img/apartment1.jpg')", 
-		"price": "34800",
-		"location": "Дмитриевская ул. 96/98 ",  
-		"district": "Шевченковский",
-		"code": "123", 
-		"room":"1", 
-		"square": "123",  
-		"floor":"1",
-		"type": "Дом"
-		},
-		{ 
-		"photo": "url(img/apartment1.jpg)", 
-		"price": "120000",
-		"location": "Дмитриевская ул. 96/98 1",  
-		"district": "Шевченковский",
-		"code": "120000", 
-		"room":"1", 
-		"square": "123",  
-		"floor":"1",
-		"type": "Дом"
-		},
-		{ 
-		"photo": "url(img/apartment1.jpg)", 
-		"price": "70000",
-		"location": "Дмитриевская ул. 96/98 2", 
-		"district": "Шевченковский", 
-		"code": "123", 
-		"room":"1", 
-		"square": "123",  
-		"floor":"1",
-		"type": "Дом"
-		}
-	],
+data = localStorage.getItem('data');
+data = JSON.parse(data);
 
-	[
- 		{
-      	"photo": "url('img/apartment1.jpg')", 
-        "price": "453321",
-        "location": "Дмитриевская ул. 96/98 3",  
-        "district": "Шевченковский",
-        "code": "123", 
-        "room":"1", 
-        "square": "123",  
-        "floor":"1",
-        "type": "Квартира"
-     	}
-	],
 
-	[
-       {
-      	"photo": "url('img/apartment1.jpg')", 
-        "price": "123",
-        "location": "Дмитриевская ул. 96/98 ",  
-        "district": "Шевченковский",
-        "code": "190277", 
-        "room":"1", 
-        "square": "123",  
-        "floor":"1",
-        "type": "Вилла"
-        }
-	]
 
-];
- 
+
+
 let checkboxHouses 		= document.querySelector('#checkboxHouses');
 let checkboxAparatments = document.querySelector('#checkboxAparatments');
 let checkboxVillas 		= document.querySelector('#checkboxVillas');
@@ -73,6 +13,7 @@ let maxPrice 			= document.querySelector('.priceUSD--max');
 let checks 				= document.querySelectorAll('.check');
 let prices 				= document.querySelectorAll('.priceUSD');
 let cards 				= document.querySelector('.cards');
+let paginations		    = document.querySelectorAll('.founded-cards__link ');
 let minPriceValue;
 let maxPriceValue;
 let arrayFilteredByType;
@@ -99,10 +40,10 @@ let cardTemplate = `
 					</div>
 					<div class="card__text">
 						<div class="price">
-							<span class="price--orange"> </span><br>
+							<span class="price--orange">$ </span><span class="price--orange price-value"> </span><br>
 						</div>
 						<div class="adress">
-							<p class="district">sdf</p>
+							<span>Район: </span><span class="dist"></span>
 							<p class="location"></p>
 						</div>
 						<a href="" class="button button__details">Details</a>
@@ -215,45 +156,62 @@ filterByDistrict = () => {
 
 let createCard = () => {
 	let card  = document.createElement('div');
-		card.innerHTML = cardTemplate
+		card.innerHTML = cardTemplate;
 		card.classList.add('card');
 		cards.appendChild(card);
 };
 
-let renderProjects = () => {
-	for (let i = 0; i < arrayToRender.length; i++) {
+
+
+let numberToShow = 2;
+// let str = arrayToRender.filter((x, i) => (i%numberToShow)==0).map((x, i) => i+1);
+
+// console.log(str);
+
+
+let start;
+let end;
+// let end   = arrayToRender.length;
+
+
+
+
+let renderProjects = (start = 0, end = 1) => {
+	cards.innerHTML = '';
+
+
+	for (let i = start-1; i <= end-1; i++) {
 		createCard();
-		let photo = document.querySelectorAll('.photo');
-		photo[i].style.backgroundImage = arrayToRender[i].photo
-		let price = document.querySelectorAll('.price--orange');
-		price[i].innerText = `$ ${arrayToRender[i].price} `;
+
+		let photo 	 = document.querySelectorAll('.photo');
+		let price 	 = document.querySelectorAll('.price-value');
 		let location = document.querySelectorAll('.location');
+		let dist 	 = document.querySelectorAll('.dist');
+		let code 	 = document.querySelectorAll('.code');
+		let type 	 = document.querySelectorAll('.type');
+		let room 	 = document.querySelectorAll('.room');
+		let square 	 = document.querySelectorAll('.square');
+		let floor 	 = document.querySelectorAll('.floor');
+		photo[i].style.backgroundImage = arrayToRender[i].photo
+		// price[i].innerText = arrayToRender[i].price;
+		price[i].innerText = i+1;
 		location[i].innerText = arrayToRender[i].location;
-		let district = document.querySelectorAll('.district');
-		district[i].innerHTML = ` Продажа квартиры в Киеве, <br> ${arrayToRender[i].district}`;
-		let code = document.querySelectorAll('.code');
+		dist[i].innerText = arrayToRender[i].district;
 		code[i].innerText = arrayToRender[i].code;
-		let type = document.querySelectorAll('.type');
 		type[i].innerText = arrayToRender[i].type;
-		let room = document.querySelectorAll('.room');
 		room[i].innerText = arrayToRender[i].room;
-		let square = document.querySelectorAll('.square');
 		square[i].innerText = arrayToRender[i].square;
-		let floor = document.querySelectorAll('.floor');
 		floor[i].innerText = arrayToRender[i].floor;
+		
 	}
 };
 
 function filter() {
-arrayToRender = [];
-cards.innerHTML = '';
-filterByType();
+		arrayToRender = [];
+	filterByType();
 filterByPrice();
 filterByDistrict();
 renderProjects();
-
-console.log(arrayToRender[0]);
-
 };
 
 filter();
@@ -269,5 +227,15 @@ for(let price of prices){
 	});
 }
 
+for (let pagination of paginations) {
+	pagination.addEventListener('click', function(e) {
+		e.preventDefault();
+		let paginationNum = pagination.getAttribute('id');
+		start = paginationNum;
+		end   = start + 1;
+		renderProjects(start, end);
 
+		console.log(paginationNum);
+	});
+}
 
