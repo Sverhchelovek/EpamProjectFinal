@@ -348,13 +348,3 @@ template {
   display: none;
 }
 
-*, *:after, *:before
-  box-sizing: border-box
-a
-  text-decoration: none
-  color: inherit  
-ul 
-  list-style: none
-ul, img, h1, h2, h3, p 
-  margin: 0
-  padding: 0

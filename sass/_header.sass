@@ -1,3 +1,13 @@
+*, *:after, *:before
+	box-sizing: border-box
+a
+	text-decoration: none
+	color: inherit  
+ul 
+	list-style: none
+ul, img, h1, h2, h3, p 
+	margin: 0
+	padding: 0
 body
 	font-family: sans-serif
 	font-size: 16px
@@ -72,14 +82,11 @@ body
 	color: #fff
 	transition: all 0.3s ease
 	&:hover
-	color: #e24598
+		color: #e24598
 .submenu
 	position: absolute
 	min-width: 150px
 	display: none
-/ object
-/ 	width: 55px
-/ 	height: 55px
 .contact
 	display: flex
 .number 
@@ -121,9 +128,9 @@ body
 	margin-top: 40px
 	display: inline-block
 	&::before
-	content: '\e804'
-	font-size: 2rem
-	color: #99db76
+		content: '\e804'
+		font-size: 2rem
+		color: #99db76
 .menu-bottom
 	display: flex
 	justify-content: space-between
@@ -189,7 +196,7 @@ body
 		position: absolute
 		top: 10px
 		left: 0
-	&:hover
-		cursor: pointer
+.btn__close:hover
+	cursor: pointer
 .icon-home-outline:before
 	content: '\e800'

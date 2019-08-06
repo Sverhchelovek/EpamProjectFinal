@@ -32,20 +32,6 @@ body {
   overflow: hidden;
 }
 
-.container {
-  max-width: 1300px;
-  width: 90vw;
-  margin: 0 auto;
-}
-
-.main__wrap {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  padding: 20px 0 100px;
-}
-
 .main-menu {
   width: 100vw;
   height: 100vh;
@@ -59,42 +45,52 @@ body {
   transition: 1s;
 }
 
+.main-slider__photo {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 20%;
+}
+
+.chicago {
+  background-image: url("../img/chicago.jpg");
+}
+
+.kiev {
+  background-image: url("../img/kiev.jpg");
+}
+
+.usa {
+  background-image: url("../img/usa.jpg");
+}
+
+.netherlands {
+  background-image: url("../img/netherlands.jpg");
+}
+
+.odesa {
+  background-image: url("../img/odesa.jpg");
+}
+
 .menu-absolute {
   position: absolute;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
 
-.main-slider__photo {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.container {
+  max-width: 1300px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.main__wrap {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-}
-
-.chicago {
-  background-image: url("../img/chicago.jpg");
-  width: 20%;
-}
-
-.kiev {
-  background-image: url("../img/kiev.jpg");
-  width: 20%;
-}
-
-.usa {
-  background-image: url("../img/usa.jpg");
-  width: 20%;
-}
-
-.netherlands {
-  background-image: url("../img/netherlands.jpg");
-  width: 20%;
-}
-
-.odesa {
-  background-image: url("../img/odesa.jpg");
-  width: 20%;
+  justify-content: space-between;
+  padding: 20px 0 100px;
 }
 
 .header {
@@ -122,7 +118,6 @@ body {
   position: relative;
   text-align: center;
 }
-
 .nav__item::before {
   content: "/ ";
   color: #fff;
@@ -133,32 +128,18 @@ body {
   color: #fff;
   transition: all 0.3s ease;
 }
-
 .nav__link:hover {
   color: #e24598;
 }
 
-.menu li ul {
+.submenu {
   position: absolute;
   min-width: 150px;
   display: none;
 }
 
-object {
-  width: 55px;
-  height: 55px;
-}
-
 .contact {
   display: flex;
-}
-
-.nav__item {
-  margin-right: 2vw;
-}
-
-.nav__item:first-child::before {
-  content: "";
 }
 
 .number {
@@ -167,20 +148,24 @@ object {
   align-self: center;
 }
 
-.contact__buttons .contact__button {
+.nav__item {
+  margin-right: 2vw;
+}
+.nav__item:first-child::before {
+  content: "";
+}
+
+.contact__buttons {
   margin-right: 20px;
 }
 
 .contact__button {
   font-weight: 500;
+  margin-right: 20px;
 }
 
 .buttons, .button {
   margin-right: 20px;
-}
-
-.contact__button {
-  font-weight: 500;
 }
 
 .button {
@@ -205,18 +190,8 @@ object {
   justify-content: space-between;
   color: #fff;
 }
-
 .main-Information__text {
   font-size: 3rem;
-}
-
-.menu-bottom {
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider-right {
-  display: inline-block;
 }
 
 .main__nuances {
@@ -228,18 +203,15 @@ object {
   margin-top: 40px;
   display: inline-block;
 }
-
 .main__nuance::before {
   content: "";
   font-size: 2rem;
   color: #99db76;
 }
 
-.button__slider {
-  position: absolute;
-  right: 50%;
-  bottom: -50px;
-  transform: translateX(50%);
+.menu-bottom {
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu__inscription {
@@ -316,6 +288,7 @@ object {
   top: 10px;
   left: 0;
 }
+
 .btn__close:hover {
   cursor: pointer;
 }
@@ -330,32 +303,26 @@ object {
   flex-direction: column;
   padding-top: 30px;
 }
-
 .about__information {
   display: flex;
   justify-content: space-between;
 }
-
 .about__text {
   max-width: 430px;
   line-height: 1.5;
 }
-
 .about__text--big {
   font-size: 30px;
   line-height: 1.6;
 }
-
 .about__values {
   display: flex;
   justify-content: space-between;
   margin: 3vh 0 5vh 0;
 }
-
 .about__value {
   margin-right: 5vw;
 }
-
 .about__value--big {
   font-size: 6rem;
   color: #99db76;
@@ -363,7 +330,6 @@ object {
   display: inline-block;
   z-index: 1;
 }
-
 .about__value--bg {
   background-color: lightblue;
   margin-top: 0.7vh;
@@ -374,10 +340,6 @@ object {
 
 .our-advantages {
   padding: 20px 0;
-}
-
-.section-two {
-  display: relative;
 }
 
 .advantages-question {
@@ -406,14 +368,12 @@ object {
   -moz-box-shadow: 4px 3px 11px 5px #dbdbdb;
   box-shadow: 4px 3px 11px 5px #dbdbdb;
 }
-
 .advantage:hover {
   background-color: #e24598;
   color: #fff;
   transition: 0.5s;
 }
-
-.text__title {
+.advantage-text__title {
   text-transform: uppercase;
   color: #3db9bf;
   font-weight: 700;
@@ -422,8 +382,7 @@ object {
   margin: 20px 0 10px 0;
   position: relative;
 }
-
-.text__title::before {
+.advantage-text__title::before {
   position: absolute;
   content: "";
   width: 35px;
@@ -434,7 +393,7 @@ object {
   left: -45px;
 }
 
-.icons__advantages {
+.advantages-icons {
   font-size: 3.5rem;
 }
 
@@ -448,6 +407,13 @@ object {
   transition: 0.5s;
 }
 
+.services-title {
+  font-size: 3rem;
+  max-width: 900px;
+  font-weight: 700;
+  margin: 20px 0px 40px 0;
+}
+
 .upper-services {
   display: flex;
   justify-content: space-between;
@@ -458,7 +424,28 @@ object {
 .upper-service {
   display: flex;
   flex-direction: column;
-  width: calc(33.3% - 10px);
+  width: 32.5%;
+}
+.upper-service__top {
+  background-color: #402985;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.service {
+  padding: 28px 28px 40px 28px;
+  color: #fff;
+  border-radius: 10px;
+}
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+}
+
+.upper-service__bottom {
+  background-color: #D3D3D3;
+  color: black;
 }
 
 .service-wrapper {
@@ -476,9 +463,9 @@ object {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
   padding: 30px 55px 30px 35px;
   color: #fff;
+  border-radius: 10px;
 }
 
 .title-big {
@@ -493,6 +480,11 @@ object {
   font-size: 20px;
 }
 
+.service__list {
+  margin-left: 20px;
+  display: block;
+}
+
 .service__details {
   display: flex;
   justify-content: space-between;
@@ -505,29 +497,6 @@ object {
   max-width: 300px;
 }
 
-.icon-right-dira::before {
-  content: "0xe806";
-  background-color: #e24598;
-}
-
-.service {
-  padding: 28px 28px 40px 28px;
-  color: #fff;
-}
-
-.services-title {
-  font-size: 3rem;
-  max-width: 900px;
-  font-weight: 700;
-  margin: 20px 0px 40px 0;
-}
-
-.service-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  display: block;
-}
-
 .our-services a {
   display: inline-block;
   margin: 60px 0px 0px;
@@ -538,50 +507,29 @@ object {
   justify-content: space-between;
 }
 
-.upper-service__top {
-  background-color: #402985;
-  border-radius: 10px;
-  margin-bottom: 10px;
-}
-
-.upper-service__bottom {
-  background-color: #D3D3D3;
-  border-radius: 10px;
-  color: black;
-}
-
-.service__list {
-  margin-left: 20px;
-  display: block;
-}
-
 .service__list li {
   margin-top: 10px;
 }
 
 .bottom-service__start {
-  width: calc(33.3% - 10px);
   background-color: #e24598;
-  border-radius: 10px;
+  width: calc(33.3% - 10px);
 }
 
 .bottom-service__middle {
-  width: calc(33.3% - 10px);
   background-color: #3db9bf;
-  border-radius: 10px;
+  width: calc(33.3% - 10px);
 }
 
 .bottom-service__end {
-  width: calc(33.3% - 10px);
   background-color: #D3D3D3;
-  border-radius: 10px;
   color: black;
+  width: calc(33.3% - 10px);
 }
 
 .our-contacts {
   margin: 50px 0;
 }
-
 .our-contacts__title {
   font-size: 2rem;
 }
@@ -599,7 +547,6 @@ object {
 .contacts {
   position: relative;
 }
-
 .contacts-inf {
   position: absolute;
   bottom: 50px;
@@ -607,7 +554,6 @@ object {
   padding: 20px;
   background-color: #fff;
 }
-
 .contacts-inf p {
   margin-top: 10px;
 }
@@ -821,11 +767,6 @@ form {
   background-color: #bdbebd;
 }
 
-.vacancy {
-  position: relative;
-  height: calc(100vh - 120px);
-}
-
 .background-block {
   position: absolute;
   z-index: 0;
@@ -835,21 +776,55 @@ form {
   opacity: 0.3;
 }
 
+.vacancy {
+  position: relative;
+  height: calc(100vh - 120px);
+}
 .vacancy__title {
   font-size: 3rem;
   max-width: 900px;
 }
-
 .vacancy__card {
+  position: relative;
   display: flex;
 }
-
 .vacancy__description {
   width: 55%;
 }
-
+.vacancy__bubble {
+  padding: 10px 20px;
+  background-color: #3db9bf;
+  position: absolute;
+  top: 15px;
+}
+.vacancy__text {
+  margin-top: 15px;
+}
+.vacancy--blue {
+  font-weight: 600;
+  color: lightblue;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
 .vacancy__offer {
   width: 45%;
+}
+
+.offer-list {
+  paddding: 30px;
+  border: 2px solid #e24598;
+  border-radius: 10px;
+}
+.offer-list__item {
+  padding: 5px;
+}
+.offer-list__join {
+  padding: 30px;
+  background-color: #3db9bf;
+}
+
+.dir-color {
+  color: #e24598;
 }
 
 /*# sourceMappingURL=style.css.map */
