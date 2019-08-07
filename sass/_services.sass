@@ -1,6 +1,7 @@
+$service-hover: scale(1.05)
+$service-transition: all .3s ease-out
+
 .services-title
-	font-size: 3rem
-	max-width: 900px
 	font-weight: 700
 	margin: 20px 0px 40px 0
 .upper-services
@@ -20,14 +21,27 @@
 	padding: 28px 28px 40px 28px
 	color: #fff
 	border-radius: 10px
+	-moz-transition: $service-transition
+	-o-transition: $service-transition
+	-webkit-transition: $service-transition	
 	&-title
 		font-size: 1.5rem
 		font-weight: 600
 		display: block
+	&:hover 
+		-webkit-transform: $service-hover
+		-ms-transform: $service-hover
+		transform: $service-hover
 .upper-service__bottom
 	background-color: #D3D3D3	
 	color: black
-
+	-moz-transition: $service-transition
+	-o-transition: $service-transition
+	-webkit-transition: $service-transition
+	&:hover 
+		-webkit-transform: $service-hover
+		-ms-transform: $service-hover
+		transform: $service-hover
 .service-wrapper
 	width: calc(100% - 32.8% - 10px)
 	background-image: url('../img/services-big.jpg')
