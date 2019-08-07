@@ -17,6 +17,10 @@ ul, img, h1, h2, h3, p {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -76,7 +80,7 @@ body {
 .menu-absolute {
   position: absolute;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .container {
@@ -136,6 +140,26 @@ body {
   position: absolute;
   min-width: 150px;
   display: none;
+  color: #fff;
+  position: absolute;
+  left: 10px;
+}
+
+.submenu li {
+  padding: 2px;
+  text-align: left;
+}
+
+.submenu li:hover {
+  color: #e24598;
+}
+
+.submenu li a {
+  padding: 10px;
+}
+
+.menu li:hover > ul {
+  display: block;
 }
 
 .contact {
@@ -178,7 +202,7 @@ body {
 
 .button:hover {
   background-color: rgba(153, 219, 118, 0);
-  border: 2px solid black;
+  border: 2px solid #fff;
 }
 
 .contact__button > a {
@@ -216,7 +240,7 @@ body {
 
 .menu__inscription {
   position: absolute;
-  bottom: -30px;
+  bottom: -10px;
   font-size: 5rem;
   right: 4vw;
   font-weight: 700;
@@ -312,8 +336,10 @@ body {
   line-height: 1.5;
 }
 .about__text--big {
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 1.6;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .about__values {
   display: flex;
@@ -765,55 +791,77 @@ form {
 
 .vacancy__wrap {
   background-color: #bdbebd;
+  height: 100%;
+  margin-top: 10px;
 }
 
 .background-block {
   position: absolute;
   z-index: 0;
   width: 350px;
-  height: calc(100vh - 120px);
-  background-color: lightblue;
-  opacity: 0.3;
+  background-color: #f1f9f9;
+  height: 85%;
+  opacity: 0.5;
 }
 
 .vacancy {
   position: relative;
-  height: calc(100vh - 120px);
 }
 .vacancy__title {
   font-size: 3rem;
   max-width: 900px;
+  margin-bottom: 30px;
 }
 .vacancy__card {
   position: relative;
   display: flex;
 }
 .vacancy__description {
-  width: 55%;
+  width: 50%;
 }
 .vacancy__bubble {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #3db9bf;
-  position: absolute;
-  top: 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
+}
+.vacancy__type {
+  margin-top: 20px;
 }
 .vacancy__text {
   margin-top: 15px;
-}
-.vacancy--blue {
-  font-weight: 600;
-  color: lightblue;
-  margin-top: 15px;
-  text-transform: uppercase;
+  line-height: 30px;
 }
 .vacancy__offer {
-  width: 45%;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.vacancy__requirements {
+  margin-top: 40px;
+}
+
+.vacancy__requirements p {
+  line-height: 25px;
+}
+
+.vacancy__text--blue {
+  font-weight: 600;
+  color: #3db9bf;
+  margin: 20px 0 5px 0;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.offer {
+  padding: 30px;
+  border: 2px solid #e24598;
+  border-radius: 10px;
 }
 
 .offer-list {
-  paddding: 30px;
-  border: 2px solid #e24598;
-  border-radius: 10px;
+  padding: 30px;
 }
 .offer-list__item {
   padding: 5px;
@@ -823,8 +871,36 @@ form {
   background-color: #3db9bf;
 }
 
+.offer-list__item {
+  margin-top: 3px;
+}
+
 .dir-color {
   color: #e24598;
+}
+
+.offer__join {
+  background-color: #3db9bf;
+  margin-top: 25px;
+  padding: 20px 35px 30px 30px;
+  border-radius: 5px;
+}
+
+.offer__text {
+  margin-bottom: 35px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.offer__text--bold {
+  font-weight: 600;
+}
+
+.button--pink {
+  background-color: #e24598;
+  border: 2px solid #e24598;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

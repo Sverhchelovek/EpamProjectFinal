@@ -8,6 +8,8 @@ ul
 ul, img, h1, h2, h3, p 
 	margin: 0
 	padding: 0
+html
+	scroll-behavior: smooth
 body
 	font-family: sans-serif
 	font-size: 16px
@@ -45,7 +47,7 @@ body
 .menu-absolute
 	position: absolute
 	width: 100%
-	background: rgba(black, 0.6)
+	background: rgba(black, 0.7)
 .container
 	max-width: 1300px
 	width: 90vw
@@ -87,6 +89,18 @@ body
 	position: absolute
 	min-width: 150px
 	display: none
+	color: #fff
+	position: absolute
+	left: 10px
+.submenu li
+	padding: 2px
+	text-align: left
+.submenu li:hover
+	color: #e24598
+.submenu li a
+	padding: 10px
+.menu li:hover >ul
+	display: block
 .contact
 	display: flex
 .number 
@@ -112,7 +126,7 @@ body
 	border: 2px solid #99db76
 .button:hover
 	background-color: rgba(153, 219, 118, 0)
-	border: 2px solid black
+	border: 2px solid #fff
 .contact__button>a
 	margin-right: 10px
 .main-Information
@@ -136,7 +150,7 @@ body
 	justify-content: space-between
 .menu__inscription
 	position: absolute
-	bottom: -30px
+	bottom: -10px
 	font-size: 5rem
 	right: 4vw
 	font-weight: 700
