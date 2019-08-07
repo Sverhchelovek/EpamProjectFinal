@@ -8,8 +8,6 @@ ul
 ul, img, h1, h2, h3, p 
 	margin: 0
 	padding: 0
-html
-	scroll-behavior: smooth
 body
 	font-family: sans-serif
 	font-size: 16px
@@ -75,6 +73,46 @@ h2
 	display: flex
 	padding: 10px 15px
 	align-self: flex-start
+	&--mobile
+		overflow: hidden
+	&_active
+		transform: translateX(0)
+		opacity: 1
+	&-btn
+		display: block
+		
+		width: 50px
+		height: 50px
+		background-color: #fff
+		border-radius: 50%
+		position: relative
+	&-btn span,
+	&-btn span:before,
+	&-btn span:after
+		position: absolute
+		top: 50%
+		margin-top: -1px
+		left: 50%
+		margin-left: -10px
+		width: 20px
+		height: 2px
+		background-color: #222
+	&-btn span:before,
+	&-btn span:after
+		content: ''
+		display: block
+		transition: 0.2s
+	&-btn span:before 
+		transform: translateY(-5px)
+	&-btn span:after 
+		transform: translateY(5px)
+	&-btn_active span 
+		height: 0
+	&-btn_active span:before 
+		transform: rotate(45deg)
+	&-btn_active span:after 
+		transform: rotate(-45deg)
+
 .nav__item
 	font-size: 18px
 	position: relative
@@ -217,3 +255,20 @@ h2
 	cursor: pointer
 .icon-home-outline::before
 	content: '\e800'
+@media (max-width: 1270px)
+	.nav__item
+		margin-right: 1vw
+	.contact
+		display: none
+	.main-Information
+		flex-direction: column
+		align-items: center
+	.main-Information__text
+		margin-bottom: 50px
+@media (max-width: 900px)
+	.menu__inscription
+		display: none
+	.menu-bottom
+		justify-content: center
+
+// =============================

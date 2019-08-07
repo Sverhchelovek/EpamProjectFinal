@@ -9,9 +9,10 @@
 .advantages
 	display: flex
 	justify-content: space-between
+	flex-wrap: wrap
 	margin-top: 4vh
 .advantage
-	width: calc(100% / 3 - 20px)
+	width: 32%
 	padding: 40px 40px 20px 30px
 	border-radius: 5px
 	transition: .4s
@@ -22,6 +23,7 @@
 		background-color: #e24598
 		color: $white
 		transition: .5s
+
 	&-text__title
 		text-transform: uppercase
 		color: #3db9bf
@@ -41,10 +43,12 @@
 		left: -45px
 .advantages-icons
 	font-size: 3.5rem
-.advantage:hover .text__title
+.advantage:hover .advantage-text__title
 	color: $white
 	transition: .5s
-.advantage:hover .text__title:before
+.advantage:hover .advantage-text__title:before
 	background-color: $white
 	transition: .5s
-
+@media (max-width: 900px)
+	.advantage
+		width: 50%

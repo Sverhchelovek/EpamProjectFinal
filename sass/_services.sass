@@ -95,3 +95,23 @@ $service-transition: all .3s ease-out
 	background-color: #D3D3D3
 	color: black
 	width: calc(33.3% - 10px)
+@media (max-width: 900px)
+	.contact-form
+		position: static
+	.upper-services
+		flex-direction: column-reverse
+	.upper-service
+		width: 100%
+		flex-direction: row
+		justify-content: space-between
+	.upper-service__bottom, .upper-service__top
+		width: 49%
+	.service-wrapper
+		width: 100%
+		margin-bottom: 10px
+	.upper-service__top
+		margin-bottom: 0
+	.service
+		padding: 10px
+	.contact-form
+		position: static

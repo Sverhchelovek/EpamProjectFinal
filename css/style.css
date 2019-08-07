@@ -17,10 +17,6 @@ ul, img, h1, h2, h3, p {
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: sans-serif;
   font-size: 16px;
@@ -120,6 +116,51 @@ h2 {
   display: flex;
   padding: 10px 15px;
   align-self: flex-start;
+}
+.menu--mobile {
+  overflow: hidden;
+}
+.menu_active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.menu-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #222;
+}
+.menu-btn span:before, .menu-btn span:after {
+  content: "";
+  display: block;
+  transition: 0.2s;
+}
+.menu-btn span:before {
+  transform: translateY(-5px);
+}
+.menu-btn span:after {
+  transform: translateY(5px);
+}
+.menu-btn_active span {
+  height: 0;
+}
+.menu-btn_active span:before {
+  transform: rotate(45deg);
+}
+.menu-btn_active span:after {
+  transform: rotate(-45deg);
 }
 
 .nav__item {
@@ -326,6 +367,33 @@ h2 {
   content: "";
 }
 
+@media (max-width: 1270px) {
+  .nav__item {
+    margin-right: 1vw;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .main-Information {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-Information__text {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .menu__inscription {
+    display: none;
+  }
+
+  .menu-bottom {
+    justify-content: center;
+  }
+}
 .about {
   display: flex;
   justify-content: space-between;
@@ -369,6 +437,27 @@ h2 {
   padding: 2px 5px;
 }
 
+@media (max-width: 1270px) {
+  .about__information {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .about__values {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .about__value {
+    margin-right: 0;
+    width: 40%;
+  }
+}
 .our-advantages {
   padding: 20px 0;
 }
@@ -383,11 +472,12 @@ h2 {
 .advantages {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 4vh;
 }
 
 .advantage {
-  width: calc(100% / 3 - 20px);
+  width: 32%;
   padding: 40px 40px 20px 30px;
   border-radius: 5px;
   transition: 0.4s;
@@ -424,16 +514,21 @@ h2 {
   font-size: 3.5rem;
 }
 
-.advantage:hover .text__title {
+.advantage:hover .advantage-text__title {
   color: #fff;
   transition: 0.5s;
 }
 
-.advantage:hover .text__title:before {
+.advantage:hover .advantage-text__title:before {
   background-color: #fff;
   transition: 0.5s;
 }
 
+@media (max-width: 900px) {
+  .advantage {
+    width: 50%;
+  }
+}
 .services-title {
   font-weight: 700;
   margin: 20px 0px 40px 0;
@@ -568,6 +663,42 @@ h2 {
   width: calc(33.3% - 10px);
 }
 
+@media (max-width: 900px) {
+  .contact-form {
+    position: static;
+  }
+
+  .upper-services {
+    flex-direction: column-reverse;
+  }
+
+  .upper-service {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .upper-service__bottom, .upper-service__top {
+    width: 49%;
+  }
+
+  .service-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .upper-service__top {
+    margin-bottom: 0;
+  }
+
+  .service {
+    padding: 10px;
+  }
+
+  .contact-form {
+    position: static;
+  }
+}
 .our-contacts {
   margin: 50px 0;
 }
@@ -663,6 +794,22 @@ form {
   display: initial;
 }
 
+@media (max-width: 900px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-form {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .contacts-inf {
+    position: static;
+    text-align: center;
+  }
+}
 .projects {
   display: flex;
   justify-content: space-between;
